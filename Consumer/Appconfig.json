@@ -1,0 +1,14 @@
+﻿{
+  "Settings": {
+    "Intervall": "3000",
+    "Keypath": "/res/"
+  },
+  "Connection": {
+    "RabbitSettings": {
+      "HostName": "",
+      "UserName": "",
+      "Password": "",
+      "Heartbeat": 60
+    }
+  }
+}

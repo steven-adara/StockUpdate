@@ -1,0 +1,33 @@
+﻿{   
+    "Connection": 
+    {
+        "RabbitSettings": {
+            "HostName":"localhost",
+            "UserName":"guest",
+            "Password":"guest",
+            "Heartbeat":60
+        },
+      "ApiSettings": {
+        "HostName": "10.148.1.169",
+        "Port": 10002,
+        "Path": "/lfsinterfaceapi/v1/stockupdate",
+        "Token": "RGllc2VBUElpc3RudXJmw7xyZGllTEZTRW50d2lja2xlcg=="
+      },
+        "TimerSettings": {
+            "Intervall": 5000
+        },
+        "GlobalSchemaSettings": {
+            "1":
+                {"version": 0}
+            ,"2":
+                {"type": "application/json"}
+            ,"3":
+                {"message": null}
+            ,"4":
+                {"created_at": null}
+        },
+        "GlobalSchema": {
+            "Count":4
+        }           
+    }
+}

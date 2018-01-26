@@ -1,0 +1,46 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "id": "https://json-schema.kfzteile24.de/envelop/v0.json#draft",
+  "type": "object",
+  "properties": {
+    "version": {
+      "description": "The schema version to be used",
+      "type": "integer",
+      "minimum": 0
+    },
+    "type": {
+      "description": "The type of this message, used for further validation of the message body.",
+      "type": "string"
+    },
+    "message": {
+      "description": "The actual body of this message or the place where to find it.",
+      "oneOf": [
+        {
+          "description": "An object describing the contents of this message.",
+          "type": "object"
+        },
+        {
+          "description": "The URI pointing to the messages location in case it was stored out of band.",
+          "type": "string",
+          "format": "uri"
+        }
+      ]
+    },
+    "created_at": {
+      "description": "The producer issued timestamp specifying when the message was created.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "sequence": {
+      "description": "Optional value that may be set by a producer to assist consumers in case that order is of importance",
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "version",
+    "type",
+    "message",
+    "created_at"
+  ]
+}

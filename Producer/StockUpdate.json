@@ -1,0 +1,92 @@
+﻿{
+  "$id": "https://json-schema.kfzteile24.de/messages/stock_update/v0.json#draft",
+  "description": "Stock Update Schema",
+  "type": "object",
+  "properties": {
+    "sequence_no": {
+      "description": "LFS sequence number",
+      "type": "string"
+    },
+    "product_id": {
+      "description": "Unique ID of the product this stock update is for.",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 28
+    },
+    "lot_number": {
+      "description": "Lot Number",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 15
+    },
+    "stock_quantity": {
+      "description": "Quantity of Stock",
+      "type": "number"
+    },
+    "stock_quantity_unit_of_measure": {
+      "description": "The stock quantity unit ofmeasure",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 3
+    },
+    "location_code": {
+      "description": "The warehouse location code this stock update is reporting for.",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 3
+    },
+    "current_quality_code": {
+      "description": "Current quality code",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2
+    },
+    "storage_location": {
+      "description": "Warehouse storage location",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 3
+    },
+    "storage_area": {
+      "description": "Warehouse storage area",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2
+    },
+    "product_description1": {
+      "description": "Product description 1",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 30
+    },
+    "product_description2": {
+      "description": "Product description 2",
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 30
+    },
+    "supply_date": {
+      "description": "Date of supply",
+      "type": "string"
+    },
+    "supply_time": {
+      "description": "Time of supply",
+      "type": "string"
+    }
+  },
+  "required": [
+    "sequence_no",
+    "product_id",
+    "lot_number",
+    "stock_quantity",
+    "stock_quantity_unit_of_measure",
+    "location_code",
+    "current_quality_code",
+    "storage_location",
+    "storage_area",
+    "product_description1",
+    "product_description2",
+    "supply_date",
+    "supply_time"
+  ]
+}
